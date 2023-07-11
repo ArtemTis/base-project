@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: #333;
   color: white;
+  font-family: 'Montserrat', 'sans-serif';
+  font-weight: 300;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  background-color: black;
+  padding: 25px 100px;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+  margin: 50px 100px;
+  width: 50%;
+  float: left;
+}
+
+aside {
+  width: 20%;
+  margin-top: 50px;
+  margin-left: 5%;
+  float: left;
+}
+
+main .user {
+  margin-bottom: 50px;
+  background-color: #3e8fa0;
+  padding: 20px;
+}
+
+main .delete-icon {
+  float: right;
+  color: #134b57;
+  cursor: pointer;
+  transform: scale(2);
+}
+
+main .edit-icon {
+  float: right;
+  margin-right: 25px;
+  color: 0#165664;
+  cursor: pointer;
+  transform: scale(2);
+}
+
+main .delete-icon:hover,
+main .edit-icon:hover {
+  opacity: 0.5;
+}
+
+ form input:not([type="checkbox"]),  form textarea,  form button {
+  width: 90%;
+  padding: 15px 5%;
+  font-family: 'Montserrat', 'sans-serif';
+  font-weight: 300;
+  margin-bottom: 10px;
+  border: 0;
+  background: #222;
+  color: white;
+  outline: none;
+  font-size: 15px;
+}
+
+aside form input[type="checkbox"]{
+  margin: 10px;
+}
+
+aside form button {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+aside form button:hover {
+  transform: scale(1.1);
+}
+
+.user form{
+  margin-top: 20px;
+}
+
+.user form input,
+.user form textarea,
+.user form button{
+  background: #134b57;
+} 
+
+.user form button:hover{
+  transform: scale(1.02);
 }
